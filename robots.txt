@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /assets/BOOK PROPOSAL - Design Your Co-Intelligence - Elina Halonen 20260206.pdf
+Disallow: /assets/Book proposal - You Are Bleeding To Death 20260206.pdf
+Disallow: /assets/Sample chapter - Introduction.pdf

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources — Elina Halonen</title>
+  <meta name="description" content="Papers, field guides and articles by Elina Halonen on behavioural science, AI governance, and human-centred design.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-name">Elina Halonen</a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#writing">Writing</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1 class="hero-name">Resources &amp; Papers</h1>
+          <p class="hero-tagline">Field guides, articles, and papers on behavioural science, AI governance, and human-centred design.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <!-- EDIT: add/remove resource entries below. Copy a resource-item block to add more. -->
+        <div class="resource-list">
+
+          <div class="resource-item">
+            <div class="resource-header">
+              <h3 class="resource-title">A Field Guide to Problem Orientations in Behavioural Science and AI</h3>
+              <span class="resource-meta">Field Guide</span>
+            </div>
+            <p>Mapping how different disciplinary orientations approach the intersection of behavioural science and artificial intelligence.</p>
+            <a href="assets/A%20field%20guide%20to%20problem%20orientations%20in%20behavioural%20science%20and%20AI%20-%20Elina%20Halonen.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download PDF</a>
+          </div>
+
+          <div class="resource-item">
+            <div class="resource-header">
+              <h3 class="resource-title">Thinking Clearly About Behavioural Science and AI</h3>
+              <span class="resource-meta">Published Article · Diversifi Compendium 2025</span>
+            </div>
+            <p>A framework for navigating the conceptual landscape at the intersection of behavioural science and AI systems.</p>
+            <a href="assets/Thinking%20clearly%20about%20behavioural%20science%20and%20AI%20-%20Elina%20Halonen%20-%20Diversifi%20Compendium%202025.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download PDF</a>
+          </div>
+
+          <div class="resource-item">
+            <div class="resource-header">
+              <h3 class="resource-title">A Framework for Culturally Adaptive HCD</h3>
+              <span class="resource-meta">Paper</span>
+            </div>
+            <p>Exploring how human-centred design can be adapted to account for cultural context and variation.</p>
+            <a href="assets/A%20Framework%20for%20Culturally%20Adaptive%20HCD.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download PDF</a>
+          </div>
+
+          <!-- EDIT: add more resources here -->
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <a href="index.html" class="btn btn-outline">&larr; Back to home</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 Elina Halonen</span>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('is-open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.remove('is-open');
+      });
+    });
+  </script>
+
+</body>
+</html>
