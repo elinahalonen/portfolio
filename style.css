@@ -2,7 +2,7 @@
    DESIGN TOKENS
    ============================================================ */
 :root {
-  --color-bg:         #F7F4EF;
+  --color-bg:         #FFFAF4;
   --color-text:       #1C2920;
   --color-green:      #2A4235;
   --color-coral:      #D78473;
@@ -65,11 +65,6 @@ h1, h2, h3 {
 
 p {
   max-width: 65ch;
-}
-
-em {
-  font-family: var(--font-serif);
-  font-style: italic;
 }
 
 /* ============================================================
@@ -174,6 +169,7 @@ em {
 
 .hero-photo {
   flex-shrink: 0;
+  order: 2;
 }
 
 .hero-photo img {
@@ -215,16 +211,45 @@ em {
 
 .hero-status {
   font-size: 0.85rem;
-  color: var(--color-sage);
-  font-weight: 400;
+  color: var(--color-green);
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
+
+.hero-social {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.hero-social a {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-green);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-divider);
+  padding-bottom: 2px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.hero-social a:hover {
+  color: var(--color-coral);
+  border-color: var(--color-coral);
+  text-decoration: none;
 }
 
 @media (max-width: 600px) {
   .hero-inner {
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  .hero-photo {
+    order: 0;
   }
 }
 
@@ -246,7 +271,7 @@ em {
   font-family: var(--font-sans);
   font-size: 0.75rem;
   font-weight: 500;
-  color: var(--color-sage);
+  color: var(--color-green);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   margin-bottom: 2rem;
@@ -275,7 +300,8 @@ em {
 
 .work-org {
   font-size: 0.8rem;
-  color: var(--color-sage);
+  color: var(--color-green);
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 0.75rem;
@@ -322,7 +348,8 @@ em {
 
 .writing-meta {
   font-size: 0.75rem;
-  color: var(--color-sage);
+  color: var(--color-green);
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -332,10 +359,52 @@ em {
   margin-bottom: 1.25rem;
 }
 
+/* Substack side-by-side */
+.substack-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 0;
+}
+
+.substack-card {
+  background-color: var(--color-divider);
+  border-radius: 4px;
+  padding: 1.25rem;
+}
+
+.substack-card h4 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--color-green);
+  margin-bottom: 0.4rem;
+}
+
+.substack-card p {
+  font-size: 0.88rem;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  max-width: none;
+}
+
+.substack-card .btn {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .substack-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Books */
 .book-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-bottom: 0;
 }
 
@@ -346,17 +415,72 @@ em {
 
 .book-title {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-style: italic;
   display: block;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.35rem;
   color: var(--color-green);
 }
 
 .book-desc {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--color-text);
   max-width: 55ch;
+  margin-bottom: 0.75rem;
+}
+
+.book-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   RESOURCES
+   ============================================================ */
+.resource-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-item {
+  padding: 2rem 0;
+  border-top: 1px solid var(--color-divider);
+}
+
+.resource-item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.resource-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.resource-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--color-green);
+}
+
+.resource-meta {
+  font-size: 0.75rem;
+  color: var(--color-green);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.resource-item p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
 }
 
 /* ============================================================
@@ -414,30 +538,6 @@ em {
 .contact-content p {
   margin-bottom: 1.5rem;
   font-size: 1rem;
-}
-
-.contact-links {
-  margin-top: 1.5rem;
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.contact-links a {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--color-text);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  text-decoration: none;
-  border-bottom: 1px solid var(--color-divider);
-  padding-bottom: 2px;
-  transition: border-color 0.2s, color 0.2s;
-}
-
-.contact-links a:hover {
-  color: var(--color-coral);
-  border-color: var(--color-coral);
 }
 
 /* ============================================================

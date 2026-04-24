@@ -21,6 +21,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#writing">Writing</a></li>
+        <li><a href="#resources">Resources</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -31,16 +32,22 @@
     <!-- HERO -->
     <section class="hero">
       <div class="hero-inner">
-        <div class="hero-photo">
-          <img src="assets/photo.jpg" alt="Elina Halonen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-          <div class="photo-placeholder">EH</div>
-        </div>
         <div class="hero-text">
           <!-- EDIT: your name -->
           <h1 class="hero-name">Elina Halonen</h1>
           <!-- EDIT: tagline -->
           <p class="hero-tagline">Strategic consultant and researcher working at the intersection of behavioral science, AI governance, and organizational strategy.</p>
           <p class="hero-status">MSc in AI &amp; Governance, VU Amsterdam</p>
+          <div class="hero-social">
+            <a href="https://www.linkedin.com/in/elinahalonen/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://artificialthought.substack.com/" target="_blank" rel="noopener">Artificial Thought</a>
+            <a href="https://thinkingaboutbehavior.substack.com/" target="_blank" rel="noopener">Thinking About Behavior</a>
+            <a href="https://www.prismaticstrategy.com/" target="_blank" rel="noopener">Prismatic Strategy</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="assets/EH.png" alt="Elina Halonen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div class="photo-placeholder">EH</div>
         </div>
       </div>
     </section>
@@ -86,11 +93,21 @@
 
         <div class="writing-item">
           <div class="writing-header">
-            <h3 class="writing-title">Artificial Thought</h3>
-            <span class="writing-meta">Substack</span>
+            <h3 class="writing-title">Substack</h3>
           </div>
-          <p>Exploring AI governance, decision-making, and maintaining clear thinking in an automated world.</p>
-          <a href="https://artificialthought.substack.com/" class="btn btn-outline" target="_blank" rel="noopener">Read on Substack</a>
+          <p>Two ongoing publications exploring AI governance, behavioral science, and clear thinking in a complex world.</p>
+          <div class="substack-grid">
+            <div class="substack-card">
+              <h4>Artificial Thought</h4>
+              <p>AI governance, decision-making, and maintaining clarity in an automated world.</p>
+              <a href="https://artificialthought.substack.com/" class="btn btn-primary" target="_blank" rel="noopener">Read Artificial Thought</a>
+            </div>
+            <div class="substack-card">
+              <h4>Thinking About Behavior</h4>
+              <p>Behavioral science, human judgment, and the systems that shape how we decide.</p>
+              <a href="https://thinkingaboutbehavior.substack.com/" class="btn btn-primary" target="_blank" rel="noopener">Read Thinking About Behavior</a>
+            </div>
+          </div>
         </div>
 
         <div class="writing-item">
@@ -101,23 +118,60 @@
             <div class="book">
               <em class="book-title">Design Your Co-Intelligence</em>
               <p class="book-desc">Exploring how to build effective human-AI collaboration systems that enhance rather than replace human judgment.</p>
+              <div class="book-links">
+                <a href="assets/BOOK%20PROPOSAL%20-%20Design%20Your%20Co-Intelligence%20-%20Elina%20Halonen%2020260206.pdf" class="btn btn-outline" target="_blank" rel="noopener">Book Proposal</a>
+                <a href="assets/Sample%20chapter%20-%20Introduction.pdf" class="btn btn-outline" target="_blank" rel="noopener">Sample Chapter</a>
+              </div>
             </div>
             <div class="book">
               <em class="book-title">You Are Bleeding to Death</em>
               <p class="book-desc">Investigating iron deficiency as a systemic medical failure and the cost of diagnostic blind spots.</p>
+              <div class="book-links">
+                <a href="assets/Book%20proposal%20-%20You%20Are%20Bleeding%20To%20Death%2020260206.pdf" class="btn btn-outline" target="_blank" rel="noopener">Book Proposal</a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="writing-item">
-          <div class="writing-header">
-            <h3 class="writing-title">Behavioral Science &amp; AI Field Mapping</h3>
-            <span class="writing-meta">Resource</span>
-          </div>
-          <p>Comprehensive guide mapping how different fields are approaching the intersection of behavioral science and artificial intelligence.</p>
-          <a href="assets/besci-ai-mapping.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download PDF</a>
-        </div>
+      </div>
+    </section>
 
+    <!-- RESOURCES -->
+    <section class="section" id="resources">
+      <div class="section-inner">
+        <h2 class="section-label">Resources &amp; Papers</h2>
+        <!-- EDIT: add/remove resource entries below -->
+
+        <div class="resource-list">
+
+          <div class="resource-item">
+            <div class="resource-header">
+              <h3 class="resource-title">A Field Guide to Problem Orientations in Behavioural Science and AI</h3>
+              <span class="resource-meta">Field Guide</span>
+            </div>
+            <p>Mapping how different disciplinary orientations approach the intersection of behavioural science and artificial intelligence.</p>
+            <a href="assets/A%20field%20guide%20to%20problem%20orientations%20in%20behavioural%20science%20and%20AI%20-%20Elina%20Halonen.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download PDF</a>
+          </div>
+
+          <div class="resource-item">
+            <div class="resource-header">
+              <h3 class="resource-title">Thinking Clearly About Behavioural Science and AI</h3>
+              <span class="resource-meta">Published Article · Diversifi Compendium 2025</span>
+            </div>
+            <p>A framework for navigating the conceptual landscape at the intersection of behavioural science and AI systems.</p>
+            <a href="assets/Thinking%20clearly%20about%20behavioural%20science%20and%20AI%20-%20Elina%20Halonen%20-%20Diversifi%20Compendium%202025.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download PDF</a>
+          </div>
+
+          <div class="resource-item">
+            <div class="resource-header">
+              <h3 class="resource-title">A Framework for Culturally Adaptive HCD</h3>
+              <span class="resource-meta">Paper</span>
+            </div>
+            <p>Exploring how human-centred design can be adapted to account for cultural context and variation.</p>
+            <a href="assets/A%20Framework%20for%20Culturally%20Adaptive%20HCD.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download PDF</a>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -129,11 +183,6 @@
         <div class="contact-content">
           <p>I'm always happy to connect with researchers, practitioners, and curious people working at the intersection of AI, governance, and human behavior.</p>
           <a href="mailto:elina@prismaticstrategy.com" class="btn btn-primary">Send an email</a>
-          <div class="contact-links">
-            <a href="https://www.linkedin.com/in/elinahalonen/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://artificialthought.substack.com/" target="_blank" rel="noopener">Substack</a>
-            <a href="https://www.prismaticstrategy.com/" target="_blank" rel="noopener">Prismatic Strategy</a>
-          </div>
         </div>
       </div>
     </section>
