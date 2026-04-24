@@ -2,10 +2,10 @@
    DESIGN TOKENS
    ============================================================ */
 :root {
-  --color-bg:         #FFFAF4;
+  --color-bg:         #F3F4EF;
   --color-text:       #1C2920;
-  --color-green:      #2A4235;
-  --color-coral:      #D78473;
+  --color-green:      #03282A;
+  --color-coral:      #CE7E6C;
   --color-sage:       #6B8070;
   --color-divider:    #D6CFC6;
 
