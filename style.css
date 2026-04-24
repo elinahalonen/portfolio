@@ -9,8 +9,8 @@
   --color-sage:       #6B8070;
   --color-divider:    #D6CFC6;
 
-  --font-serif:       'Cormorant Garamond', Georgia, serif;
-  --font-sans:        'Inter', system-ui, sans-serif;
+  --font-serif:       'Playfair Display', Georgia, serif;
+  --font-sans:        'DM Sans', system-ui, sans-serif;
 
   --max-width:        720px;
   --section-pad:      5rem 1.5rem;
@@ -34,8 +34,8 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-sans);
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 1.0625rem;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -58,8 +58,8 @@ a:hover {
    ============================================================ */
 h1, h2, h3 {
   font-family: var(--font-serif);
-  font-weight: 300;
-  line-height: 1.2;
+  font-weight: 700;
+  line-height: 1.15;
   color: var(--color-green);
 }
 
@@ -74,8 +74,8 @@ p {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--color-bg);
-  border-bottom: 1px solid var(--color-divider);
+  background-color: var(--color-green);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
   height: var(--nav-height);
 }
 
@@ -92,8 +92,8 @@ p {
 .nav-name {
   font-family: var(--font-serif);
   font-size: 1.1rem;
-  font-weight: 400;
-  color: var(--color-green);
+  font-weight: 700;
+  color: #fff;
   letter-spacing: 0.01em;
 }
 
@@ -107,7 +107,7 @@ p {
   font-family: var(--font-sans);
   font-size: 0.9rem;
   font-weight: 400;
-  color: var(--color-text);
+  color: rgba(255,255,255,0.75);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -122,7 +122,7 @@ p {
   background: none;
   border: none;
   font-size: 1.25rem;
-  color: var(--color-green);
+  color: #fff;
   cursor: pointer;
 }
 
@@ -137,8 +137,8 @@ p {
     top: var(--nav-height);
     left: 0;
     right: 0;
-    background-color: var(--color-bg);
-    border-bottom: 1px solid var(--color-divider);
+    background-color: var(--color-green);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
     flex-direction: column;
     padding: 1rem 1.5rem;
     gap: 1rem;
@@ -153,8 +153,8 @@ p {
    HERO
    ============================================================ */
 .hero {
-  border-bottom: 1px solid var(--color-coral);
-  padding: 4rem 1.5rem 3.5rem;
+  background-color: var(--color-green);
+  padding: 4rem 1.5rem 4rem;
 }
 
 .hero-inner {
@@ -162,7 +162,7 @@ p {
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
-  gap: 2.5rem;
+  gap: 3rem;
 }
 
 .hero-photo {
@@ -171,61 +171,63 @@ p {
 }
 
 .hero-photo img {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 4px;
   object-fit: cover;
+  opacity: 0.92;
 }
 
 .photo-placeholder {
   display: none;
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 4px;
-  background-color: var(--color-divider);
-  color: var(--color-sage);
+  background-color: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.5);
   font-family: var(--font-serif);
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 400;
   align-items: center;
   justify-content: center;
 }
 
 .hero-name {
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
-  font-weight: 300;
-  color: var(--color-green);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 700;
+  color: #fff;
   margin-bottom: 0.75rem;
-  letter-spacing: -0.01em;
+  line-height: 1.05;
 }
 
 .hero-tagline {
   font-size: 1.05rem;
-  color: var(--color-text);
-  max-width: 55ch;
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  color: rgba(255,255,255,0.82);
+  max-width: 52ch;
+  margin-bottom: 0.9rem;
+  line-height: 1.65;
+  font-weight: 300;
 }
 
 .hero-status {
   font-size: 0.9rem;
-  color: var(--color-sage);
+  color: var(--color-coral);
   font-weight: 400;
 }
 
 .hero-social {
   display: flex;
   gap: 1.5rem;
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
   flex-wrap: wrap;
 }
 
 .hero-social a {
   font-size: 0.9rem;
   font-weight: 400;
-  color: var(--color-green);
+  color: rgba(255,255,255,0.7);
   text-decoration: none;
-  border-bottom: 1px solid var(--color-divider);
+  border-bottom: 1px solid rgba(255,255,255,0.25);
   padding-bottom: 2px;
   transition: border-color 0.2s, color 0.2s;
 }
