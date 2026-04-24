@@ -234,6 +234,7 @@ em {
 .section {
   border-bottom: 1px solid var(--color-coral);
   padding: var(--section-pad);
+  scroll-margin-top: calc(var(--nav-height) + 1rem);
 }
 
 .section-inner {
@@ -300,7 +301,7 @@ em {
   border-top: 1px solid var(--color-divider);
 }
 
-.writing-item:first-child {
+.writing-item:first-of-type {
   border-top: none;
   padding-top: 0;
 }
