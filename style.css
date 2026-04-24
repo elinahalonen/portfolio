@@ -1,0 +1,457 @@
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
+  --color-bg:         #F7F4EF;
+  --color-text:       #1C2920;
+  --color-green:      #2A4235;
+  --color-coral:      #D78473;
+  --color-sage:       #6B8070;
+  --color-divider:    #D6CFC6;
+
+  --font-serif:       'Cormorant Garamond', Georgia, serif;
+  --font-sans:        'Inter', system-ui, sans-serif;
+
+  --max-width:        720px;
+  --section-pad:      5rem 1.5rem;
+  --nav-height:       3.5rem;
+}
+
+/* ============================================================
+   RESET
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-coral);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--color-green);
+}
+
+p {
+  max-width: 65ch;
+}
+
+em {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-divider);
+  height: var(--nav-height);
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-name {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--color-green);
+  letter-spacing: 0.01em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--color-coral);
+  text-decoration: none;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--color-green);
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-divider);
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  border-bottom: 1px solid var(--color-coral);
+  padding: 4rem 1.5rem 3.5rem;
+}
+
+.hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.hero-photo {
+  flex-shrink: 0;
+}
+
+.hero-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.photo-placeholder {
+  display: none;
+  width: 120px;
+  height: 120px;
+  border-radius: 4px;
+  background-color: var(--color-divider);
+  color: var(--color-sage);
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 300;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-name {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  color: var(--color-green);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.hero-tagline {
+  font-size: 1.05rem;
+  color: var(--color-text);
+  max-width: 55ch;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.hero-status {
+  font-size: 0.85rem;
+  color: var(--color-sage);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 600px) {
+  .hero-inner {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* ============================================================
+   SHARED SECTION STYLES
+   ============================================================ */
+.section {
+  border-bottom: 1px solid var(--color-coral);
+  padding: var(--section-pad);
+}
+
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-sage);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 2rem;
+}
+
+.section-content p + p {
+  margin-top: 1rem;
+}
+
+/* ============================================================
+   CURRENT WORK
+   ============================================================ */
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.work-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--color-green);
+  margin-bottom: 0.25rem;
+}
+
+.work-org {
+  font-size: 0.8rem;
+  color: var(--color-sage);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+
+.work-item p {
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ============================================================
+   WRITING & PROJECTS
+   ============================================================ */
+.writing-item {
+  padding: 2rem 0;
+  border-top: 1px solid var(--color-divider);
+}
+
+.writing-item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.writing-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.writing-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--color-green);
+}
+
+.writing-meta {
+  font-size: 0.75rem;
+  color: var(--color-sage);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.writing-item p {
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+
+.book {
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-coral);
+}
+
+.book-title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--color-green);
+}
+
+.book-desc {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  max-width: 55ch;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.55rem 1.25rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-coral);
+  color: #fff;
+  border: 1.5px solid var(--color-coral);
+}
+
+.btn-primary:hover {
+  background-color: #c47060;
+  border-color: #c47060;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-coral);
+  border: 1.5px solid var(--color-coral);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-coral);
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .btn {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.contact-links {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-divider);
+  padding-bottom: 2px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.contact-links a:hover {
+  color: var(--color-coral);
+  border-color: var(--color-coral);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  padding: 2rem 1.5rem;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.footer span {
+  font-size: 0.8rem;
+  color: var(--color-sage);
+}
