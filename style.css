@@ -264,11 +264,11 @@ p {
 }
 
 .section-label {
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: var(--color-sage);
-  margin-bottom: 0.5rem;
+  font-family: var(--font-serif);
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--color-green);
+  margin-bottom: 1.75rem;
 }
 
 .section-content p + p {
