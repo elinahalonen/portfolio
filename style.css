@@ -9,12 +9,22 @@
   --color-sage:       #6B8070;
   --color-divider:    #D6CFC6;
 
-  --font-serif:       'Playfair Display', Georgia, serif;
+  --font-display:     'Barlow Condensed', sans-serif;
   --font-sans:        'DM Sans', system-ui, sans-serif;
 
   --max-width:        720px;
   --section-pad:      5rem 1.5rem;
   --nav-height:       3.5rem;
+
+  --ease-out-expo:    cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================================
+   SELECTION
+   ============================================================ */
+::selection {
+  background-color: var(--color-coral);
+  color: #fff;
 }
 
 /* ============================================================
@@ -57,10 +67,12 @@ a:hover {
    TYPOGRAPHY
    ============================================================ */
 h1, h2, h3 {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.1;
   color: var(--color-green);
+  text-wrap: balance;
+  letter-spacing: -0.01em;
 }
 
 p {
@@ -90,11 +102,12 @@ p {
 }
 
 .nav-name {
-  font-family: var(--font-serif);
-  font-size: 1.1rem;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
   font-weight: 700;
   color: #fff;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
+  text-decoration: none;
 }
 
 .nav-links {
@@ -154,15 +167,19 @@ p {
    ============================================================ */
 .hero {
   background-color: var(--color-green);
-  padding: 2rem 1.5rem 2.5rem;
+  padding: 2.25rem 1.5rem 2.75rem;
 }
 
 .hero-inner {
   max-width: var(--max-width);
   margin: 0 auto;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 3rem;
+}
+
+.hero-text {
+  flex: 1;
 }
 
 .hero-photo {
@@ -173,11 +190,12 @@ p {
 .hero-graphic {
   flex-shrink: 0;
   order: 2;
-  width: 220px;
-  height: 160px;
+  width: 210px;
+  height: 210px;
   overflow: hidden;
-  border-radius: 4px;
-  opacity: 0.88;
+  border-radius: 3px;
+  opacity: 0.9;
+  /* no entrance animation — appears immediately */
 }
 
 .hero-graphic img {
@@ -202,7 +220,7 @@ p {
   border-radius: 4px;
   background-color: rgba(255,255,255,0.1);
   color: rgba(255,255,255,0.5);
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 400;
   align-items: center;
@@ -215,21 +233,25 @@ p {
   color: #fff;
   margin-bottom: 0.75rem;
   line-height: 1.05;
+  letter-spacing: -0.02em;
 }
 
 .hero-tagline {
-  font-size: 1.25rem;
-  color: rgba(255,255,255,0.9);
-  max-width: 52ch;
-  margin-bottom: 0.75rem;
-  line-height: 1.55;
-  font-weight: 300;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 500;
+  color: rgba(255,255,255,0.95);
+  max-width: 24ch;
+  margin-bottom: 0.85rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 .hero-status {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--color-coral);
   font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
 .hero-social {
@@ -264,6 +286,10 @@ p {
   .hero-photo {
     order: 0;
   }
+
+  .hero-graphic {
+    display: none;
+  }
 }
 
 /* ============================================================
@@ -281,11 +307,29 @@ p {
 }
 
 .section-label {
-  font-family: var(--font-serif);
-  font-size: 1.9rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 700;
   color: var(--color-green);
   margin-bottom: 1.75rem;
+  letter-spacing: -0.02em;
+}
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* JS adds .reveal-js-ready to hide before observer fires */
+.reveal-js-ready {
+  opacity: 0;
+}
+
+.reveal-js-ready.is-visible {
+  animation: revealUp 0.65s var(--ease-out-expo) forwards;
 }
 
 .section-content p + p {
@@ -302,7 +346,7 @@ p {
 }
 
 .work-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.35rem;
   font-weight: 400;
   color: var(--color-green);
@@ -349,7 +393,7 @@ p {
 }
 
 .writing-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.35rem;
   font-weight: 400;
   color: var(--color-green);
@@ -381,7 +425,7 @@ p {
 }
 
 .substack-card h4 {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 400;
   color: var(--color-green);
@@ -421,10 +465,9 @@ p {
 }
 
 .book-title {
-  font-family: var(--font-serif);
-  font-size: 1.3rem;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
   font-weight: 600;
-  font-style: italic;
   display: block;
   margin-bottom: 0.35rem;
   color: var(--color-green);
@@ -470,7 +513,7 @@ p {
 }
 
 .resource-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 400;
   color: var(--color-green);
