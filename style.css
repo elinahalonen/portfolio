@@ -5,7 +5,7 @@
   --color-bg:         #F3F4EF;
   --color-text:       #1C2920;
   --color-green:      #020252;
-  --color-coral:      #ff7c80;
+  --color-coral:      #F26B6B;
   --color-sage:       #6B8070;
   --color-divider:    #D6CFC6;
 
@@ -13,7 +13,7 @@
   --font-sans:        'DM Sans', system-ui, sans-serif;
 
   --max-width:        720px;
-  --section-pad:      5rem 1.5rem;
+  --section-pad:      5.75rem 1.5rem;
   --nav-height:       3.5rem;
 
   --ease-out-expo:    cubic-bezier(0.16, 1, 0.3, 1);
@@ -47,6 +47,7 @@ body {
   font-size: 1.0625rem;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
+  border-top: 3px solid var(--color-coral);
 }
 
 img {
@@ -86,8 +87,8 @@ p {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--color-coral);
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  background-color: var(--color-green);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   height: var(--nav-height);
   padding: 0 1.5rem;
 }
@@ -118,7 +119,7 @@ p {
 }
 
 .nav-name:hover {
-  color: var(--color-green);
+  color: var(--color-coral);
   text-decoration: none;
 }
 
@@ -138,7 +139,7 @@ p {
 }
 
 .nav-links a:hover {
-  color: var(--color-green);
+  color: var(--color-coral);
   text-decoration: none;
 }
 
@@ -162,8 +163,8 @@ p {
     top: var(--nav-height);
     left: 0;
     right: 0;
-    background-color: var(--color-coral);
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    background-color: var(--color-green);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
     flex-direction: column;
     padding: 1rem 1.5rem;
     gap: 1rem;
@@ -178,7 +179,7 @@ p {
    HERO
    ============================================================ */
 .hero {
-  background-color: var(--color-green);
+  background: linear-gradient(180deg, #010140 0%, #020252 55%, #03035e 100%);
   padding: 2.25rem 1.5rem 2.75rem;
 }
 
@@ -324,8 +325,18 @@ p {
   font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 700;
   color: var(--color-green);
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.25rem;
   letter-spacing: -0.02em;
+}
+
+.section-label::after {
+  content: '';
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  background-color: var(--color-coral);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* ============================================================
@@ -416,6 +427,16 @@ p {
   color: var(--color-green);
 }
 
+.writing-title::after {
+  content: '';
+  display: block;
+  width: 1.75rem;
+  height: 2px;
+  background-color: var(--color-coral);
+  margin-top: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
 .writing-meta {
   font-size: 0.8rem;
   color: var(--color-sage);
@@ -439,6 +460,11 @@ p {
   background-color: var(--color-divider);
   border-radius: 4px;
   padding: 1.25rem;
+  transition: box-shadow 0.2s;
+}
+
+.substack-card:hover {
+  box-shadow: 0 3px 14px rgba(242, 107, 107, 0.13);
 }
 
 .substack-card h4 {
@@ -564,9 +590,9 @@ p {
   font-size: 0.875rem;
   font-weight: 400;
   padding: 0.55rem 1.25rem;
-  border-radius: 4px;
+  border-radius: 3px;
   text-decoration: none;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
   cursor: pointer;
 }
 
@@ -577,10 +603,11 @@ p {
 }
 
 .btn-primary:hover {
-  background-color: #e8636a;
-  border-color: #e8636a;
+  background-color: #d45757;
+  border-color: #d45757;
   text-decoration: none;
   color: #fff;
+  box-shadow: 0 2px 8px rgba(242, 107, 107, 0.25);
 }
 
 .btn-outline {
