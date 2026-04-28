@@ -9,8 +9,8 @@
   --color-sage:       #6B8070;
   --color-divider:    #D6CFC6;
 
-  --font-display:     'Barlow Condensed', sans-serif;
-  --font-sans:        'DM Sans', system-ui, sans-serif;
+  --font-display:     'Spectral', Georgia, serif;
+  --font-sans:        'Inter', system-ui, sans-serif;
 
   --max-width:        720px;
   --section-pad:      5.75rem 1.5rem;
@@ -45,7 +45,7 @@ body {
   color: var(--color-text);
   font-family: var(--font-sans);
   font-size: 1.0625rem;
-  line-height: 1.75;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   border-top: 3px solid var(--color-coral);
 }
@@ -69,11 +69,11 @@ a:hover {
    ============================================================ */
 h1, h2, h3 {
   font-family: var(--font-display);
-  font-weight: 700;
-  line-height: 1.1;
+  font-weight: 600;
+  line-height: 1.2;
   color: var(--color-green);
   text-wrap: balance;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 p {
@@ -109,11 +109,11 @@ p {
 }
 
 .nav-name {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 500;
   color: #fff;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -131,8 +131,8 @@ p {
 
 .nav-links a {
   font-family: var(--font-sans);
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: 0.875rem;
+  font-weight: 500;
   color: rgba(255,255,255,0.9);
   text-decoration: none;
   transition: color 0.2s;
@@ -242,22 +242,22 @@ p {
 
 .hero-name {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 5.6vw, 3.85rem);
-  font-weight: 700;
+  font-size: clamp(2.4rem, 5.6vw, 4.2rem);
+  font-weight: 600;
   color: #fff;
   margin-bottom: 0.5rem;
-  line-height: 1.0;
-  letter-spacing: -0.02em;
+  line-height: 1.15;
+  letter-spacing: 0;
 }
 
 .hero-tagline {
   font-family: var(--font-sans);
   font-size: clamp(1rem, 1.6vw, 1.2rem);
-  font-weight: 300;
-  color: rgba(255,255,255,0.85);
+  font-weight: 400;
+  color: rgba(255,255,255,0.8);
   max-width: 52ch;
   margin-bottom: 0.85rem;
-  line-height: 1.5;
+  line-height: 1.6;
   letter-spacing: 0;
 }
 
@@ -322,11 +322,11 @@ p {
 
 .section-label {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  font-weight: 700;
+  font-size: clamp(1.75rem, 3.5vw, 2.4rem);
+  font-weight: 500;
   color: var(--color-green);
   margin-bottom: 1.25rem;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .section-label::after {
@@ -376,7 +376,7 @@ p {
 .work-title {
   font-family: var(--font-display);
   font-size: 1.35rem;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--color-green);
   margin-bottom: 0.25rem;
 }
@@ -423,7 +423,7 @@ p {
 .writing-title {
   font-family: var(--font-display);
   font-size: 1.35rem;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--color-green);
 }
 
@@ -470,7 +470,7 @@ p {
 .substack-card h4 {
   font-family: var(--font-display);
   font-size: 1.15rem;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--color-green);
   margin-bottom: 0.4rem;
 }
@@ -565,7 +565,7 @@ p {
 .resource-title {
   font-family: var(--font-display);
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--color-green);
 }
 
@@ -588,7 +588,7 @@ p {
   display: inline-block;
   font-family: var(--font-sans);
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 500;
   padding: 0.55rem 1.25rem;
   border-radius: 3px;
   text-decoration: none;
