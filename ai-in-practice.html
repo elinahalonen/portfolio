@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI in Practice — Elina Halonen</title>
+  <meta name="description" content="Why I work in AI, and how a behavioural science background shapes the way I approach delegation, decision-making, and accountability.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-name">Elina Halonen</a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="ai-in-practice.html">AI in Practice</a></li>
+        <li><a href="areas-of-interest.html">Interests</a></li>
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#writing">Writing</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1 class="hero-name" style="font-size: clamp(1.8rem, 4.5vw, 3rem);">AI in practice: behaviour, decisions, and responsibility</h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-inner">
+        <div class="section-content">
+          <p>I wanted to move into AI at this stage of my career because this is where I see the most interesting problems, and because many problems around AI are ultimately rooted in human behaviour. AI is already changing how work is done, decisions are made, and responsibility is handled. Whether that change leads to better outcomes is still open. What is clear is that the systems being built, deployed, and used are shaped by human assumptions, and those assumptions are often wrong.</p>
+          <p>My background is in behavioural science, and most of my work has involved situations where strategies, policies, or systems assume that people will behave in a certain way, and then fail when they do not. AI is a new version of the same problem, but with wider consequences and less room for correction after the fact.</p>
+          <p>The current focus in organisations is often on capability: what AI can do, where it can be applied, how quickly it can be rolled out. The harder part is making it work in practice. That is where the same set of problems keeps appearing:</p>
+          <ul style="margin: 0.75rem 0 1.25rem 1.25rem; display: flex; flex-direction: column; gap: 0.5rem;">
+            <li style="font-size: 0.95rem; max-width: 65ch;">AI tools are introduced, but workflows, roles, and decision points are not redesigned. Use remains uneven or adds friction instead of removing it.</li>
+            <li style="font-size: 0.95rem; max-width: 65ch;">People adapt quickly, but there is no shared understanding of when to rely on AI, when to question it, or how to recognise failure.</li>
+            <li style="font-size: 0.95rem; max-width: 65ch;">AI outputs influence decisions, but responsibility for outcomes is not clearly defined.</li>
+            <li style="font-size: 0.95rem; max-width: 65ch;">Work is handed to AI gradually, without an explicit decision about what should be delegated and under what conditions.</li>
+            <li style="font-size: 0.95rem; max-width: 65ch;">Policies and governance frameworks exist, but they do not translate into day-to-day work.</li>
+            <li style="font-size: 0.95rem; max-width: 65ch;">"Human oversight" is assumed to manage risk, but what the human is expected to do in practice is rarely specified.</li>
+          </ul>
+          <p>These are questions of how work is organised, how decisions are made, and how responsibility is distributed when tasks are shared between people and systems.</p>
+          <p>I approach these problems by mapping what is actually happening in the workflow: what is being delegated, who is making decisions, what assumptions are being made about human behaviour, and where responsibility really sits.</p>
+          <p>This is the area I am now working in: using a behavioural lens to examine how AI is adopted, how it reshapes decision-making, and how organisations can make delegation and accountability work in practice.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <a href="index.html" class="btn btn-outline">&larr; Back to home</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 Elina Halonen</span>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('is-open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.remove('is-open');
+      });
+    });
+
+    var revealEls = document.querySelectorAll('.reveal');
+    revealEls.forEach(function(el) { el.classList.add('reveal-js-ready'); });
+    var revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.06 });
+    revealEls.forEach(function(el) { revealObserver.observe(el); });
+  </script>
+
+</body>
+</html>
