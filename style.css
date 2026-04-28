@@ -86,9 +86,14 @@ p {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--color-green);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  background-color: var(--color-coral);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
   height: var(--nav-height);
+}
+
+/* Home page nav: no name, so right-align the links */
+.nav-index .nav-inner {
+  justify-content: flex-end;
 }
 
 .nav-inner {
@@ -108,6 +113,12 @@ p {
   color: #fff;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-name:hover {
+  color: var(--color-green);
+  text-decoration: none;
 }
 
 .nav-links {
@@ -120,13 +131,13 @@ p {
   font-family: var(--font-sans);
   font-size: 0.9rem;
   font-weight: 400;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.9);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .nav-links a:hover {
-  color: var(--color-coral);
+  color: var(--color-green);
   text-decoration: none;
 }
 
@@ -150,8 +161,8 @@ p {
     top: var(--nav-height);
     left: 0;
     right: 0;
-    background-color: var(--color-green);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background-color: var(--color-coral);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
     flex-direction: column;
     padding: 1rem 1.5rem;
     gap: 1rem;
@@ -228,11 +239,12 @@ p {
 }
 
 .hero-name {
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 8vw, 5.5rem);
   font-weight: 700;
   color: #fff;
-  margin-bottom: 0.75rem;
-  line-height: 1.05;
+  margin-bottom: 0.5rem;
+  line-height: 1.0;
   letter-spacing: -0.02em;
 }
 
