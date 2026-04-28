@@ -4,11 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>You Are Bleeding to Death — Elina Halonen</title>
-  <meta name="description" content="You Are Bleeding to Death — a book by Elina Halonen on iron deficiency as systemic medical failure.">
+  <meta name="description" content="You Are Bleeding to Death — a systems-level investigation into iron deficiency, gendered medicine, and the quiet loss of women's capacity. A book by Elina Halonen.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=3">
+  <style>
+    .book-tag {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-family: var(--font-sans);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .book-subtitle {
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      font-weight: 400;
+      color: rgba(255,255,255,0.75);
+      max-width: 36ch;
+      line-height: 1.3;
+      margin-top: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    .book-list {
+      margin: 0.75rem 0 1.25rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .book-list li {
+      font-size: 0.95rem;
+      max-width: 65ch;
+    }
+
+    .pullquote {
+      border-left: 2px solid var(--color-coral);
+      padding: 0.5rem 0 0.5rem 1.25rem;
+      margin: 1.75rem 0;
+    }
+
+    .pullquote p {
+      font-size: 0.95rem;
+      color: var(--color-text);
+      font-style: italic;
+    }
+
+    .readers-list {
+      margin: 0.75rem 0 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    .readers-list li {
+      font-size: 0.95rem;
+      max-width: 65ch;
+      padding-left: 1.25rem;
+      position: relative;
+    }
+
+    .readers-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--color-coral);
+    }
+  </style>
 </head>
 <body>
 
@@ -31,33 +100,83 @@
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-text">
-          <p class="hero-status">Book in progress</p>
-          <h1 class="hero-name"><em>You Are Bleeding to Death</em></h1>
+          <span class="book-tag">Book in progress</span>
+          <h1 class="hero-name" style="font-size: clamp(2.4rem, 6vw, 4.5rem); font-style: italic;">You Are Bleeding to Death</h1>
+          <p class="book-subtitle">A systems-level investigation into iron deficiency, gendered medicine, and the quiet loss of women's capacity.</p>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <!-- OPENING -->
+    <section class="section reveal" id="about">
       <div class="section-inner">
-        <h2 class="section-label">About the Book</h2>
-        <!-- EDIT: add your book description here -->
         <div class="section-content">
-          <p>Investigating iron deficiency as a systemic medical failure and the cost of diagnostic blind spots.</p>
-          <p>Add your full description here.</p>
+          <p>Iron deficiency affects one in three women worldwide, yet it rarely appears as the explanation for why women are exhausted, cognitively impaired, physically diminished, or quietly shrinking their lives around what they can no longer sustain.</p>
+          <p>This book asks a simple question: How can a condition be common, measurable, biologically fundamental, and still routinely missed?</p>
+          <p>The answer is not one bad doctor, one failed test, or one unlucky patient — it is a system problem.</p>
+          <p>Iron deficiency sits at the intersection of:</p>
+          <ul class="book-list">
+            <li>biology that starts failing before anaemia appears</li>
+            <li>diagnostic thresholds that recognise collapse better than decline</li>
+            <li>clinical habits that treat women's exhaustion as ordinary</li>
+            <li>lab ranges that can make depletion look "normal"</li>
+            <li>patients who learn to blame themselves because no one gives them a better explanation</li>
+          </ul>
+          <p>At the centre of the book is my own case: ten years of progressive cognitive and physical decline, repeatedly missed, followed by a rapid reversal after IV iron. That reversal is used as evidence of what happens when a hidden physiological constraint is finally removed.</p>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <!-- THE ARGUMENT -->
+    <section class="section reveal" id="argument">
       <div class="section-inner">
-        <h2 class="section-label">What You'll Find Inside</h2>
-        <!-- EDIT: add chapter overview, key themes, etc. here -->
+        <h2 class="section-label">The argument</h2>
         <div class="section-content">
-          <p>Add your content here.</p>
+          <p>The book's central argument is that iron deficiency is not a minor nutritional issue.</p>
+          <p>Iron is infrastructure — required for energy production, oxygen use, brain function, immune regulation, and repair. When iron runs low, the body does not simply get "tired." It starts to ration capacity, and that rationing has widespread consequences.</p>
+          <p>Women keep working, caring, masking, and adapting — often by lowering their expectations, cutting out elements of their life, and eventually stopping to start new things. They typically call it ageing, burnout, hormones, stress, depression, ADHD, laziness, or personal failure. Medicine often agrees, politely and efficiently, which is always reassuring when the problem is institutional neglect wearing a white coat.</p>
         </div>
       </div>
     </section>
 
+    <!-- THE MISSION -->
+    <section class="section reveal" id="mission">
+      <div class="section-inner">
+        <h2 class="section-label">The mission</h2>
+        <div class="section-content">
+          <p>The mission of the book is to make this failure visible.</p>
+          <p>Every woman who bleeds should know what ferritin is. Every woman should know that haemoglobin can be normal while iron stores are depleted. Every woman should know that exhaustion, brain fog, mood change, poor recovery, and exercise intolerance can be signs of a body running below baseline.</p>
+          <p>Every woman should also know why this is not routinely explained.</p>
+          <p>This is not simply a matter of individual oversight — it reflects how clinical knowledge is translated into practice:</p>
+          <ul class="book-list">
+            <li>diagnostic frameworks prioritise clear, late-stage markers over gradual decline</li>
+            <li>haemoglobin is treated as a reliable signal because it is standardised, comparable, and easy to act on</li>
+            <li>ferritin is more informative for early depletion, but harder to interpret across contexts and influenced by inflammation</li>
+            <li>laboratory reference ranges are population-based, which means they can embed deficiency into "normal"</li>
+            <li>guidelines are built around evidence that is easier to measure (anaemia, not early depletion) and harder to update once established</li>
+            <li>treatment decisions sit within cost, access, and risk considerations that favour conservative thresholds</li>
+          </ul>
+          <p>These choices make sense within the constraints of large-scale medicine: standardisation, safety, and resource management. Taken together, they produce a predictable outcome: a condition that develops slowly, presents diffusely, and does not cross formal thresholds is consistently deprioritised.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO THIS IS FOR -->
+    <section class="section reveal" id="audience">
+      <div class="section-inner">
+        <h2 class="section-label">Who this book is for</h2>
+        <div class="section-content">
+          <p>This book is written for the people who encounter that outcome from different sides:</p>
+          <ul class="readers-list">
+            <li>women trying to understand what is happening to their bodies</li>
+            <li>clinicians working within imperfect tools and guidelines</li>
+            <li>anyone interested in how biological reality and institutional decision-making come apart in practice</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- BACK -->
     <section class="section">
       <div class="section-inner">
         <a href="index.html" class="btn btn-outline">&larr; Back to home</a>
@@ -81,6 +200,18 @@
         document.querySelector('.nav-links').classList.remove('is-open');
       });
     });
+
+    var revealEls = document.querySelectorAll('.reveal');
+    revealEls.forEach(function(el) { el.classList.add('reveal-js-ready'); });
+    var revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.06 });
+    revealEls.forEach(function(el) { revealObserver.observe(el); });
   </script>
 
 </body>

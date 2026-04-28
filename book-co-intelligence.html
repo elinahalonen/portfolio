@@ -4,11 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Design Your Co-Intelligence — Elina Halonen</title>
-  <meta name="description" content="Design Your Co-Intelligence — a book by Elina Halonen exploring human-AI collaboration.">
+  <meta name="description" content="Design Your Co-Intelligence — a behavioural scientist's guide to human–AI collaboration by Elina Halonen.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=3">
+  <style>
+    .book-tag {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-family: var(--font-sans);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .book-subtitle {
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      font-weight: 400;
+      color: rgba(255,255,255,0.75);
+      max-width: 38ch;
+      line-height: 1.3;
+      margin-top: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    .book-list {
+      margin: 0.75rem 0 1.25rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .book-list li {
+      font-size: 0.95rem;
+      max-width: 65ch;
+    }
+
+    .readers-list {
+      margin: 0.75rem 0 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    .readers-list li {
+      font-size: 0.95rem;
+      max-width: 65ch;
+      padding-left: 1.25rem;
+      position: relative;
+    }
+
+    .readers-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--color-coral);
+    }
+  </style>
 </head>
 <body>
 
@@ -31,33 +88,65 @@
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-text">
-          <p class="hero-status">Book in progress</p>
-          <h1 class="hero-name"><em>Design Your Co-Intelligence</em></h1>
+          <span class="book-tag">Book in progress</span>
+          <h1 class="hero-name" style="font-size: clamp(2.4rem, 6vw, 4.5rem); font-style: italic;">Design Your Co-Intelligence</h1>
+          <p class="book-subtitle">Before you can work well with artificial intelligence, you need a clearer model of your own.</p>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <!-- OPENING -->
+    <section class="section reveal" id="about">
       <div class="section-inner">
-        <h2 class="section-label">About the Book</h2>
-        <!-- EDIT: add your book description here -->
         <div class="section-content">
-          <p>Exploring how to build effective human-AI collaboration systems that enhance rather than replace human judgment.</p>
-          <p>Add your full description here.</p>
+          <p>Generative AI is already embedded in professional work, but most guidance starts in the wrong place. It begins with the system: what it can do, how to prompt it, where it saves time. This book begins with the user.</p>
+          <p><em>Design Your Co-Intelligence</em> is a behavioural scientist's guide to understanding your own intelligence before trying to work effectively with another one. It argues that good human–AI collaboration depends less on clever prompts than on self-knowledge: how you think, where your reasoning compresses too quickly, what kind of support sharpens your judgement, and what kind of fluency quietly weakens it.</p>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <!-- THE PROBLEM -->
+    <section class="section reveal" id="problem">
       <div class="section-inner">
-        <h2 class="section-label">What You'll Find Inside</h2>
-        <!-- EDIT: add chapter overview, key themes, etc. here -->
+        <h2 class="section-label">The problem</h2>
         <div class="section-content">
-          <p>Add your content here.</p>
+          <p>The central problem is familiar. AI outputs are often fluent and technically competent, yet still require substantial revision. Users rewrite prompts repeatedly without understanding why one version works and another does not. The interaction feels powerful, but difficult to rely on. A great deal of effort is invested, but little of it accumulates into a stable working method.</p>
+          <p>Generative AI does not simply answer questions; it extends the structure of the thinking it receives. When your assumptions, preferences, uncertainty, or decision thresholds remain implicit, the system fills the gaps with plausible continuation. The result may look coherent while failing to support the kind of judgement your work actually requires.</p>
         </div>
       </div>
     </section>
 
+    <!-- THE APPROACH -->
+    <section class="section reveal" id="approach">
+      <div class="section-inner">
+        <h2 class="section-label">The approach</h2>
+        <div class="section-content">
+          <p>The book reframes AI use as a relationship between two information-processing systems: one human, one artificial. That relationship works best when the human side is made explicit first.</p>
+          <p>It helps readers map:</p>
+          <ul class="book-list">
+            <li>how they tend to think under pressure</li>
+            <li>where they move too quickly from fragments to conclusions</li>
+            <li>what kinds of challenge, pacing, structure, and tone improve their reasoning</li>
+            <li>when AI should generate, question, summarise, slow down, or get out of the way</li>
+          </ul>
+          <p>At the centre is an interaction contract: a structured specification for how AI should work with your intelligence rather than merely respond to your requests. It defines the role of the system, the kind of collaboration required, and the guardrails that protect reasoning quality.</p>
+          <p>The aim is not to automate judgement or produce better prompts. It is to make thinking more explicit, deliberate, and transferable, so that work with AI becomes less improvised and more cumulative.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO THIS IS FOR -->
+    <section class="section reveal" id="audience">
+      <div class="section-inner">
+        <h2 class="section-label">Who this book is for</h2>
+        <div class="section-content">
+          <p><em>Design Your Co-Intelligence</em> is written for knowledge workers whose value depends on complex judgement: researchers, strategists, consultants, writers, policy professionals, and leaders. It is for people who have already discovered that AI can be useful, impressive, shallow, irritating, and wrong — sometimes within the same conversation.</p>
+          <p>The book offers a practical framework for turning that inconsistency into a designed collaboration. It begins with the simplest uncomfortable premise: before you can work well with artificial intelligence, you need a clearer model of your own.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BACK -->
     <section class="section">
       <div class="section-inner">
         <a href="index.html" class="btn btn-outline">&larr; Back to home</a>
@@ -81,6 +170,18 @@
         document.querySelector('.nav-links').classList.remove('is-open');
       });
     });
+
+    var revealEls = document.querySelectorAll('.reveal');
+    revealEls.forEach(function(el) { el.classList.add('reveal-js-ready'); });
+    var revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.06 });
+    revealEls.forEach(function(el) { revealObserver.observe(el); });
   </script>
 
 </body>

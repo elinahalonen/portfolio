@@ -3,12 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MA Thesis — Elina Halonen</title>
-  <meta name="description" content="Human oversight in AI and agentic systems in the public sector — MSc thesis by Elina Halonen.">
+  <title>MSc Thesis — Elina Halonen</title>
+  <meta name="description" content="Human oversight in AI and agentic systems in the public sector — MSc thesis research summary by Elina Halonen, VU Amsterdam.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=3">
+  <style>
+    .thesis-meta {
+      font-size: 0.85rem;
+      color: var(--color-sage);
+      margin-bottom: 0.5rem;
+      font-family: var(--font-sans);
+    }
+    .thesis-note {
+      display: inline-block;
+      margin-top: 1.25rem;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.6);
+      font-style: italic;
+      max-width: 52ch;
+      line-height: 1.5;
+    }
+    .research-questions {
+      margin: 0.75rem 0 1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .research-questions li {
+      font-size: 0.95rem;
+      max-width: 65ch;
+    }
+    .rq-note {
+      font-size: 0.9rem;
+      font-style: italic;
+      color: var(--color-sage);
+      margin-top: 0.25rem;
+      max-width: 60ch;
+    }
+    .data-sources {
+      margin: 0.5rem 0 1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .data-sources li {
+      font-size: 0.95rem;
+      max-width: 65ch;
+    }
+    .analysis-list {
+      margin: 0.5rem 0 0 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .analysis-list li {
+      font-size: 0.95rem;
+      max-width: 65ch;
+    }
+    .pdf-section {
+      padding: var(--section-pad);
+      border-bottom: 1px solid var(--color-coral);
+    }
+    .pdf-section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .pdf-embed {
+      width: 100%;
+      height: 620px;
+      border: 1px solid var(--color-divider);
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    .footnote {
+      font-size: 0.8rem;
+      color: var(--color-sage);
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--color-divider);
+      max-width: 65ch;
+    }
+    .footnote a {
+      color: var(--color-sage);
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
@@ -31,42 +112,91 @@
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-text">
-          <p class="hero-status">MSc thesis · AI &amp; Governance, VU Amsterdam</p>
-          <h1 class="hero-name">Human oversight in AI and agentic systems in the public sector</h1>
+          <p class="thesis-meta" style="color: rgba(255,255,255,0.6);">MSc thesis · AI &amp; Governance, VU Amsterdam · Supervisor: Dr Kayla Shroeder</p>
+          <h1 class="hero-name" style="font-size: clamp(2rem, 5vw, 3.5rem);">Human oversight in AI and agentic systems in the public sector</h1>
+          <span class="thesis-note">This is an accessible research summary prepared for fieldwork participants — not the academic proposal.</span>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <!-- IN A NUTSHELL -->
+    <section class="section reveal" id="nutshell">
       <div class="section-inner">
-        <h2 class="section-label">About the Research</h2>
-        <!-- EDIT: add your thesis description, research questions, methodology etc. here -->
+        <h2 class="section-label">In a nutshell</h2>
         <div class="section-content">
-          <p>Add your research description here.</p>
+          <p>Human oversight is often described as a person reviewing or intervening in AI-driven decisions. In practice, the space for meaningful intervention is often shaped earlier, through design choices, workflow structures, role definitions, escalation rules, and assumptions about what people will be able to notice, understand, and correct.</p>
+          <p>In AI and agentic systems, this becomes more difficult because tasks may be linked across multiple steps, responsibilities may be distributed, and human involvement may shift from direct review to supervision, exception handling, or prior specification.</p>
+          <p>This study examines how oversight is understood, specified, and organised in public sector contexts where AI and agentic systems are being adopted, piloted, or considered. Rather than focusing only on mature deployments, it also looks at how organisations plan, define, and justify oversight in earlier stages of system design and introduction.</p>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <!-- BACKGROUND -->
+    <section class="section reveal" id="background">
       <div class="section-inner">
-        <h2 class="section-label">Research Questions</h2>
-        <!-- EDIT: add your research questions here -->
+        <h2 class="section-label">Background</h2>
         <div class="section-content">
-          <p>Add your research questions here.</p>
+          <p>Public sector organisations are rapidly exploring and adopting AI to improve efficiency, consistency, and service delivery. At the same time, organisational readiness remains uneven. Around 90% of organisations plan to explore or deploy AI-enabled or agentic systems within the next 2 to 3 years, yet fewer than 25% report high maturity in the data capabilities required to support these systems.<sup>1</sup></p>
+          <p>This creates a practical tension: systems are being deployed faster than the structures needed to understand and govern them. AI is increasingly used not only to support decisions, but also to structure and execute parts of the decision process itself. This introduces a form of delegated decision authority, where aspects of judgement are embedded in technical systems, workflows, and operational rules.</p>
+          <p>Recent developments in agentic systems extend this further. These systems may be designed to plan, coordinate, or act across multiple steps within organisational workflows, which raises new questions about coordination, control, and accountability when multiple systems and actors interact.</p>
+          <p>AI governance frameworks often treat human oversight as a key safeguard. In practice, this is usually framed as a person reviewing outputs, monitoring system behaviour, or intervening when needed. However, this assumes that decision-makers can understand how the system reaches outcomes and that meaningful intervention remains possible at the point of use.</p>
+          <p>In reality, many important decisions are already shaped earlier in the process through system design, data selection, thresholds, permissions, and workflow constraints. This suggests that oversight may be better understood not as a single action, but as a distributed organisational arrangement spanning design, procurement, monitoring, and escalation.</p>
+        </div>
+        <p class="footnote"><sup>1</sup> <a href="https://www.capgemini.com/insights/research-library/data-foundations-for-government/" target="_blank" rel="noopener">'Data foundations for government – From AI ambition to execution'</a>, Capgemini Research Institute, May 2025.</p>
+      </div>
+    </section>
+
+    <!-- RESEARCH QUESTIONS -->
+    <section class="section reveal" id="research-questions">
+      <div class="section-inner">
+        <h2 class="section-label">Research questions</h2>
+        <div class="section-content">
+          <p>How is human oversight understood, specified, and organised across organisational roles, processes, and governance mechanisms in AI and agentic systems in public sector contexts?</p>
+          <ul class="research-questions">
+            <li>How are assumptions about human monitoring, intervention, and responsibility reflected in organisational roles and processes?</li>
+            <li>What mechanisms are used to structure oversight in practice (e.g. monitoring, escalation, review), and how are these expected to work?</li>
+            <li>How do emerging agentic systems challenge existing assumptions about where oversight sits, how it operates, and what humans are expected to do?</li>
+          </ul>
+          <p>The study takes a flexible approach to case selection, recognising that AI and agentic systems are at different stages of development across the public sector. Cases may include systems in use, pilots, or initiatives at earlier stages of design, procurement, or consideration.</p>
+          <p class="rq-note"><em>Note: The study uses the term "agentic systems" pragmatically to refer to systems described as more autonomous, multi-step, or action-oriented, recognising that terminology is still evolving.</em></p>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <!-- METHODOLOGY -->
+    <section class="section reveal" id="methodology">
       <div class="section-inner">
         <h2 class="section-label">Methodology</h2>
-        <!-- EDIT: add your methodology here -->
         <div class="section-content">
-          <p>Add your methodology here.</p>
+          <p>This study uses an exploratory qualitative design to examine how human oversight is interpreted and operationalised in practice. The focus is on understanding how oversight works in real organisational settings, rather than measuring how often specific practices occur.</p>
+          <p>The study examines AI-enabled decision systems embedded in organisational workflows, with particular attention to emerging agent-based systems that can initiate or coordinate actions across tasks. These systems are relevant because they change how decision-making is structured.</p>
+          <p>Oversight mechanisms rely on assumptions about how people monitor system behaviour and recognise potential issues. They also assume that individuals can decide when and how to intervene. The study explores how these assumptions are reflected in actual organisational arrangements.</p>
+          <p>The research is based on 3–5 case studies of AI-enabled systems that are adopted, piloted, or currently being designed within public sector organisations. Data sources include:</p>
+          <ul class="data-sources">
+            <li>Document analysis: procurement materials, governance frameworks, public documentation of AI systems, audit or risk procedures</li>
+            <li>Semi-structured interviews: with actors involved in design, implementation, or governance (e.g. public officials, vendors, consultants)</li>
+          </ul>
+          <p>The material is analysed using qualitative thematic analysis, with a focus on identifying patterns in:</p>
+          <ul class="analysis-list">
+            <li>how oversight responsibilities are distributed</li>
+            <li>how system behaviour is monitored</li>
+            <li>how escalation and intervention are structured in practice</li>
+          </ul>
         </div>
       </div>
     </section>
 
+    <!-- PDF DOWNLOAD & EMBED -->
+    <div class="pdf-section">
+      <div class="pdf-section-inner">
+        <h2 class="section-label">Research summary document</h2>
+        <p style="margin-bottom: 1.25rem; font-size: 0.95rem;">Download or read the original research summary below.</p>
+        <a href="research-summary.pdf" class="btn btn-primary" download style="margin-bottom: 1.5rem;">Download PDF</a>
+        <iframe class="pdf-embed" src="research-summary.pdf" title="Research summary PDF"></iframe>
+      </div>
+    </div>
+
+    <!-- BACK -->
     <section class="section">
       <div class="section-inner">
         <a href="index.html" class="btn btn-outline">&larr; Back to home</a>
@@ -90,6 +220,18 @@
         document.querySelector('.nav-links').classList.remove('is-open');
       });
     });
+
+    var revealEls = document.querySelectorAll('.reveal');
+    revealEls.forEach(function(el) { el.classList.add('reveal-js-ready'); });
+    var revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.06 });
+    revealEls.forEach(function(el) { revealObserver.observe(el); });
   </script>
 
 </body>
