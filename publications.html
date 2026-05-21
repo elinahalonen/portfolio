@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications — Elina Halonen</title>
+  <meta name="description" content="Academic publications and conference presentations by Elina Halonen in behavioural science, consumer psychology, and brand research.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Spectral:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=8">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-name">Elina Halonen</a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="ai-in-practice.html">AI in Practice</a></li>
+        <li><a href="areas-of-interest.html">Interests</a></li>
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#writing">Writing</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1 class="hero-name">Publications</h1>
+          <p class="hero-tagline">Academic publications and conference presentations in behavioural science, consumer psychology, and brand research.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-inner">
+        <h2 class="section-label">Journal articles</h2>
+        <div class="section-content">
+
+          <div style="margin-bottom: 2rem;">
+            <p style="margin-bottom: 0.25rem;">Halonen, E. (2013) "Mirror, mirror, on the wall — which brand is like me, most of all? Integrating consumers into brand personality measurement." <em>International Journal of Market Research</em>, Vol. 55, No. 1.</p>
+          </div>
+
+          <div style="margin-bottom: 2rem;">
+            <p style="margin-bottom: 0.25rem;">"Jamie Oliver at Sainsbury's — analysis of a brand alliance" (2011) <em>Strategic Direction</em>, Vol. 27, No. 2. Review journal directed at marketing practitioners.</p>
+          </div>
+
+          <div style="margin-bottom: 2rem;">
+            <p style="margin-bottom: 0.25rem;">Halonen-Knight, E. &amp; Hurmerinta, L. (2010) "Who endorses whom? Meaning transfer in celebrity endorsement." <em>Journal of Product and Brand Management</em>, Vol. 19, No. 6, pp. 452–460.</p>
+            <p style="font-size: 0.9rem; color: var(--color-muted); margin-top: 0.25rem;">264 citations and 24,000 downloads since publication.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-inner">
+        <h2 class="section-label">Conference presentations</h2>
+        <div class="section-content">
+          <ul style="margin: 0 0 0 1.25rem; display: flex; flex-direction: column; gap: 0.85rem;">
+            <li>Caldwell, L. &amp; Halonen, E. (2012) "JDM for dummies: turning decision research into practical tools for marketers." Annual Conference of the Society for Judgment and Decision Making, Minneapolis, USA. (Poster)</li>
+            <li>Caldwell, L. &amp; Halonen, E. (2012) "Sunk cost fallacy: psychological causes and economic effects." TIBER XI Symposium on Behavioural Economics, Tilburg, The Netherlands. (Poster)</li>
+            <li>Caldwell, L. &amp; Halonen, E. (2012) "Sunk cost effect: psychological, cultural, or just economically rational?" 30th International Congress of Psychology, Cape Town, South Africa.</li>
+            <li>Halonen, E. (2012) "Self-construals, consumer need for uniqueness, and self-brand congruence." 30th International Congress of Psychology, Cape Town, South Africa.</li>
+            <li>Caldwell, L. &amp; Halonen, E. (2012) "Sunk cost effect: psychological, cultural, or just economically rational?" International Association for Cross-Cultural Psychology, 21st International Congress, Stellenbosch, South Africa.</li>
+            <li>Halonen, E. (2012) "Self-construals, consumer need for uniqueness, and self-brand congruence." International Association for Cross-Cultural Psychology, 21st International Congress, Stellenbosch, South Africa.</li>
+            <li>Kende, J. &amp; Halonen, E. (2012) "Window to the global mind: cross-cultural differences and similarities in Google searches." International Association for Cross-Cultural Psychology, 21st International Congress, Stellenbosch, South Africa.</li>
+            <li>Caldwell, L. &amp; Halonen, E. (2012) "Sunk cost effect: psychological, cultural, or just economically rational?" International Conference on Thinking 2012, London, UK.</li>
+            <li>Halonen-Knight, E. &amp; Hurmerinta, L. (2011) "Managing celebrity endorsement as a strategic brand alliance." 1st International Colloquium on Corporate Identity, Zürich, Switzerland.</li>
+            <li>Halonen-Knight, E. &amp; Hurmerinta, L. (2009) "Celebrity endorsement — a form of brand alliance?" 5th International Brand Identity and Corporate Reputation Conference, Cambridge, UK.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <a href="index.html" class="btn btn-outline">&larr; Back to home</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 Elina Halonen</span>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('is-open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.remove('is-open');
+      });
+    });
+
+    var revealEls = document.querySelectorAll('.reveal');
+    revealEls.forEach(function(el) { el.classList.add('reveal-js-ready'); });
+    var revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.06 });
+    revealEls.forEach(function(el) { revealObserver.observe(el); });
+  </script>
+
+</body>
+</html>
