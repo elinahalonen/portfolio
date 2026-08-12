@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MSc Thesis — Elina Halonen</title>
-  <meta name="description" content="Human oversight in AI and agentic systems in the public sector — MSc thesis research summary by Elina Halonen, VU Amsterdam.">
+  <title>The Agentic Artificial Bureaucrat — Elina Halonen</title>
+  <meta name="description" content="MSc thesis by Elina Halonen on how public-sector advisory documents characterise agentic AI as an administrative actor, and connect configuration to delegation, discretion, control and accountability.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Spectral:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
@@ -12,53 +12,27 @@
   <style>
     .thesis-meta {
       font-size: 0.85rem;
-      color: var(--color-sage);
+      color: rgba(255,255,255,0.6);
       margin-bottom: 0.5rem;
       font-family: var(--font-sans);
     }
-    .thesis-note {
-      display: inline-block;
-      margin-top: 1.25rem;
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.6);
-      font-style: italic;
-      max-width: 52ch;
-      line-height: 1.5;
-    }
-    .research-questions {
+    .bullet-list {
       margin: 0.75rem 0 1rem 1.25rem;
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
     }
-    .research-questions li {
+    .bullet-list li {
       font-size: 0.95rem;
       max-width: 65ch;
     }
-    .rq-note {
-      font-size: 0.9rem;
-      font-style: italic;
-      color: var(--color-sage);
-      margin-top: 0.25rem;
-      max-width: 60ch;
-    }
-    .data-sources {
-      margin: 0.5rem 0 1rem 1.25rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-    .data-sources li {
-      font-size: 0.95rem;
-      max-width: 65ch;
-    }
-    .analysis-list {
+    .sub-list {
       margin: 0.5rem 0 0 1.25rem;
       display: flex;
       flex-direction: column;
       gap: 0.4rem;
     }
-    .analysis-list li {
+    .sub-list li {
       font-size: 0.95rem;
       max-width: 65ch;
     }
@@ -76,18 +50,6 @@
       border: 1px solid var(--color-divider);
       border-radius: 4px;
       margin-bottom: 1rem;
-    }
-    .footnote {
-      font-size: 0.8rem;
-      color: var(--color-sage);
-      margin-top: 2rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--color-divider);
-      max-width: 65ch;
-    }
-    .footnote a {
-      color: var(--color-sage);
-      text-decoration: underline;
     }
   </style>
 </head>
@@ -114,9 +76,8 @@
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-text">
-          <p class="thesis-meta" style="color: rgba(255,255,255,0.6);">MSc thesis · AI &amp; Governance, VU Amsterdam · Supervisor: Dr Kayla Shroeder</p>
-          <h1 class="hero-name" style="font-size: clamp(2rem, 5vw, 3.5rem);">Human oversight in AI and agentic systems in the public sector</h1>
-          <span class="thesis-note">This is an accessible research summary prepared for fieldwork participants — not the academic proposal.</span>
+          <p class="thesis-meta">MSc thesis &middot; AI &amp; Governance, Vrije Universiteit Amsterdam &middot; Submitted August 2026</p>
+          <h1 class="hero-name" style="font-size: clamp(2rem, 5vw, 3.5rem);">The Agentic Artificial Bureaucrat</h1>
         </div>
       </div>
     </section>
@@ -126,64 +87,135 @@
       <div class="section-inner">
         <h2 class="section-label">In a nutshell</h2>
         <div class="section-content">
-          <p>Human oversight is often described as a person reviewing or intervening in AI-driven decisions. In practice, the space for meaningful intervention is often shaped earlier, through design choices, workflow structures, role definitions, escalation rules, and assumptions about what people will be able to notice, understand, and correct.</p>
-          <p>In AI and agentic systems, this becomes more difficult because tasks may be linked across multiple steps, responsibilities may be distributed, and human involvement may shift from direct review to supervision, exception handling, or prior specification.</p>
-          <p>This study examines how oversight is understood, specified, and organised in public sector contexts where AI and agentic systems are being adopted, piloted, or considered. Rather than focusing only on mature deployments, it also looks at how organisations plan, define, and justify oversight in earlier stages of system design and introduction.</p>
+          <p>Agentic AI is increasingly described as capable of planning, coordinating and acting across multi-step workflows. In public administration, this means AI may do more than support an individual decision. It may organise parts of the process through which decisions are prepared, routed, reviewed and carried out.</p>
+          <p>My thesis examines how public-sector-facing advisory documents imagine this emerging administrative actor. It asks what roles and capabilities are attributed to agentic AI, what work and authority may be delegated to it, and how control, oversight and accountability are expected to operate.</p>
+          <p>The analysis shows that agentic AI cannot be understood simply as a technical tool placed inside an otherwise unchanged organisation. Its behaviour depends on a wider arrangement of models, tools, information, permissions, workflows and human responsibilities.</p>
+          <p>Human oversight is part of that arrangement, but the phrase conceals materially different forms of involvement. Approval, monitoring, exception handling, takeover, audit and nominal human responsibility do not provide the same kind of control.</p>
         </div>
       </div>
     </section>
 
-    <!-- BACKGROUND -->
-    <section class="section reveal" id="background">
+    <!-- THE RESEARCH PROBLEM -->
+    <section class="section reveal" id="problem">
       <div class="section-inner">
-        <h2 class="section-label">Background</h2>
+        <h2 class="section-label">The research problem</h2>
         <div class="section-content">
-          <p>Public sector organisations are rapidly exploring and adopting AI to improve efficiency, consistency, and service delivery. At the same time, organisational readiness remains uneven. Around 90% of organisations plan to explore or deploy AI-enabled or agentic systems within the next 2 to 3 years, yet fewer than 25% report high maturity in the data capabilities required to support these systems.<sup>1</sup></p>
-          <p>This creates a practical tension: systems are being deployed faster than the structures needed to understand and govern them. AI is increasingly used not only to support decisions, but also to structure and execute parts of the decision process itself. This introduces a form of delegated decision authority, where aspects of judgement are embedded in technical systems, workflows, and operational rules.</p>
-          <p>Recent developments in agentic systems extend this further. These systems may be designed to plan, coordinate, or act across multiple steps within organisational workflows, which raises new questions about coordination, control, and accountability when multiple systems and actors interact.</p>
-          <p>AI governance frameworks often treat human oversight as a key safeguard. In practice, this is usually framed as a person reviewing outputs, monitoring system behaviour, or intervening when needed. However, this assumes that decision-makers can understand how the system reaches outcomes and that meaningful intervention remains possible at the point of use.</p>
-          <p>In reality, many important decisions are already shaped earlier in the process through system design, data selection, thresholds, permissions, and workflow constraints. This suggests that oversight may be better understood not as a single action, but as a distributed organisational arrangement spanning design, procurement, monitoring, and escalation.</p>
+          <p>Public administration depends on delegation. Tasks and authority are distributed between institutions, officials, contractors and technical systems. Agentic AI introduces a new possible participant in these arrangements: a system that may pursue objectives, select actions, use tools, coordinate tasks and continue operating with varying degrees of human involvement.</p>
+          <p>This creates difficulties for familiar ideas about oversight and responsibility.</p>
+          <p>A human may remain formally responsible without having the information, authority, time or practical means needed to govern what the system does. A final decision may be reviewed by a person even though earlier agentic actions have already shaped the available evidence, options or route through the process. Controls described as "human in the loop" may therefore represent very different distributions of judgement and authority.</p>
+          <p>The relevant question is not simply whether a human remains involved. It is what the system is configured to do, which consequential choices it can make, and whether the surrounding human and organisational arrangement can meaningfully direct, inspect and correct its behaviour.</p>
         </div>
-        <p class="footnote"><sup>1</sup> <a href="https://www.capgemini.com/insights/research-library/data-foundations-for-government/" target="_blank" rel="noopener">'Data foundations for government – From AI ambition to execution'</a>, Capgemini Research Institute, May 2025.</p>
       </div>
     </section>
 
-    <!-- RESEARCH QUESTIONS -->
+    <!-- RESEARCH QUESTION -->
     <section class="section reveal" id="research-questions">
       <div class="section-inner">
-        <h2 class="section-label">Research questions</h2>
+        <h2 class="section-label">Research question</h2>
         <div class="section-content">
-          <p>How is human oversight understood, specified, and organised across organisational roles, processes, and governance mechanisms in AI and agentic systems in public sector contexts?</p>
-          <ul class="research-questions">
-            <li>How are assumptions about human monitoring, intervention, and responsibility reflected in organisational roles and processes?</li>
-            <li>What mechanisms are used to structure oversight in practice (e.g. monitoring, escalation, review), and how are these expected to work?</li>
-            <li>How do emerging agentic systems challenge existing assumptions about where oversight sits, how it operates, and what humans are expected to do?</li>
+          <p>How do public-sector-facing advisory documents characterise agentic AI as an administrative actor, and connect its configuration to delegation, discretion, control and accountability?</p>
+          <p>The analysis examined four related questions:</p>
+          <ul class="bullet-list">
+            <li>How are the roles, capabilities and architectures of agentic AI characterised?</li>
+            <li>What tasks, authority and discretion are delegated to these systems?</li>
+            <li>How are configuration and anticipated failures connected to control, oversight and accountability?</li>
+            <li>How do these accounts differ between commercial, public-interest and official producers?</li>
           </ul>
-          <p>The study takes a flexible approach to case selection, recognising that AI and agentic systems are at different stages of development across the public sector. Cases may include systems in use, pilots, or initiatives at earlier stages of design, procurement, or consideration.</p>
-          <p class="rq-note"><em>Note: The study uses the term "agentic systems" pragmatically to refer to systems described as more autonomous, multi-step, or action-oriented, recognising that terminology is still evolving.</em></p>
         </div>
       </div>
     </section>
 
-    <!-- METHODOLOGY -->
-    <section class="section reveal" id="methodology">
+    <!-- METHOD -->
+    <section class="section reveal" id="method">
       <div class="section-inner">
-        <h2 class="section-label">Methodology</h2>
+        <h2 class="section-label">Method</h2>
         <div class="section-content">
-          <p>This study uses an exploratory qualitative design to examine how human oversight is interpreted and operationalised in practice. The focus is on understanding how oversight works in real organisational settings, rather than measuring how often specific practices occur.</p>
-          <p>The study examines AI-enabled decision systems embedded in organisational workflows, with particular attention to emerging agent-based systems that can initiate or coordinate actions across tasks. These systems are relevant because they change how decision-making is structured.</p>
-          <p>Oversight mechanisms rely on assumptions about how people monitor system behaviour and recognise potential issues. They also assume that individuals can decide when and how to intervene. The study explores how these assumptions are reflected in actual organisational arrangements.</p>
-          <p>The research is based on 3–5 case studies of AI-enabled systems that are adopted, piloted, or currently being designed within public sector organisations. Data sources include:</p>
-          <ul class="data-sources">
-            <li>Document analysis: procurement materials, governance frameworks, public documentation of AI systems, audit or risk procedures</li>
-            <li>Semi-structured interviews: with actors involved in design, implementation, or governance (e.g. public officials, vendors, consultants)</li>
+          <p>The thesis uses qualitative documentary analysis to examine 17 public-facing advisory documents about agentic AI in or relevant to the public sector.</p>
+          <p>The corpus contains material produced by:</p>
+          <ul class="bullet-list">
+            <li>commercial consultancies and technology organisations;</li>
+            <li>public-interest and intermediary organisations;</li>
+            <li>governments and other official bodies.</li>
           </ul>
-          <p>The material is analysed using qualitative thematic analysis, with a focus on identifying patterns in:</p>
-          <ul class="analysis-list">
-            <li>how oversight responsibilities are distributed</li>
-            <li>how system behaviour is monitored</li>
-            <li>how escalation and intervention are structured in practice</li>
+          <p>More than 1,000 passages were coded across six main analytical domains:</p>
+          <ul class="bullet-list">
+            <li>the administrative actor being imagined;</li>
+            <li>system configuration;</li>
+            <li>delegation and discretion;</li>
+            <li>risks and failure pathways;</li>
+            <li>control and oversight;</li>
+            <li>responsible actors.</li>
           </ul>
+          <p>The analysis considered both the prevalence of different ideas and the relationships constructed between them. The aim was not to treat the documents as neutral descriptions of a settled technology. They were analysed as accounts that help define what agentic AI is understood to be, what it may legitimately be asked to do and how responsibility for its actions is allocated.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT THE STUDY FOUND -->
+    <section class="section reveal" id="findings">
+      <div class="section-inner">
+        <h2 class="section-label">What the study found</h2>
+        <div class="section-content">
+          <p>The documents do not describe one stable form of agentic AI. They describe different configured arrangements with different combinations of capabilities, access, authority and human involvement.</p>
+          <p>Across the corpus, several broad patterns emerged.</p>
+
+          <p><strong>Consequential choices may occur before the final decision.</strong></p>
+          <p>An agent may select information, decompose a task, choose tools, coordinate other systems, determine whether an exception exists or decide what should be escalated. A human approving the final output does not necessarily review or understand all the choices that shaped it.</p>
+
+          <p><strong>Human oversight is highly elastic.</strong></p>
+          <p>The term is used for arrangements ranging from direct approval to occasional monitoring, exception handling, retrospective audit and general human responsibility. These arrangements give people very different opportunities to influence system behaviour.</p>
+
+          <p><strong>Control is often described more abstractly than capability.</strong></p>
+          <p>Documents may explain in considerable detail what an agent can do while describing the corresponding human or organisational controls through broad terms such as guardrails, monitoring or human oversight.</p>
+
+          <p><strong>Formal responsibility does not guarantee governing capacity.</strong></p>
+          <p>Responsibility is frequently retained by human officials or organisations. Less attention is given to whether those actors have sufficient visibility, competence, authority and practical ability to intervene.</p>
+
+          <p><strong>Configuration, risk and control are connected unevenly.</strong></p>
+          <p>Documents identify many relevant controls, but they do not consistently show which system property or failure pathway each control is meant to address. This makes it difficult to assess whether a proposed control is adequate for the particular arrangement being described.</p>
+
+          <p><strong>Producer groups emphasise different concerns.</strong></p>
+          <p>Commercial documents tend to give greater attention to capabilities, implementation and the reduction of routine human involvement. Official and public-interest documents place more emphasis on accountability, legitimacy, transparency and the continued role of human judgement. Considerable variation also exists within each group.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CONFIGURATION MATTERS -->
+    <section class="section reveal" id="configuration">
+      <div class="section-inner">
+        <h2 class="section-label">Why configuration matters</h2>
+        <div class="section-content">
+          <p>Terms such as autonomy, memory, tools and human oversight are often used as if each described a single property. In practice, they compress distinctions that matter.</p>
+          <p>For example:</p>
+          <ul class="bullet-list">
+            <li>retaining information is not the same as adapting future behaviour through experience;</li>
+            <li>recording an action is not the same as giving a responsible person usable information;</li>
+            <li>providing an intervention mechanism is not the same as giving someone authority and practical ability to use it;</li>
+            <li>an agent recognising the need for escalation is not the same as having a functioning escalation route;</li>
+            <li>assigning responsibility is not the same as ensuring that the responsible actor can exercise control.</li>
+          </ul>
+          <p>These distinctions affect what the system can do, how problems can arise and which controls might work. Governance therefore needs to engage with the configured properties of the system rather than relying only on broad labels.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHERE THE RESEARCH LEADS NEXT -->
+    <section class="section reveal" id="next">
+      <div class="section-inner">
+        <h2 class="section-label">Where the research leads next</h2>
+        <div class="section-content">
+          <p>The thesis exposed a wider problem: technical and governance discussions often describe agentic systems at different levels.</p>
+          <p>Technical accounts provide detailed explanations of architectures, memory systems, planners, tools and orchestration. Governance accounts discuss autonomy, risk, oversight, accountability and guardrails. What is often missing is a shared middle level for describing the system properties that matter for behaviour and consequences.</p>
+          <p>My post-thesis research develops this idea into a design grammar for agentic behaviour.</p>
+          <p>The aim is to identify the distinct constructs needed to:</p>
+          <ul class="bullet-list">
+            <li>describe an agentic arrangement precisely;</li>
+            <li>design the conditions under which intended behaviour should occur;</li>
+            <li>diagnose why observed or anticipated behaviour occurs;</li>
+            <li>identify how unwanted behaviour can be prevented, constrained, redirected, detected or reversed.</li>
+          </ul>
+          <p>The central governance question then becomes: <em>What does this configuration make possible, and what are the consequences?</em></p>
+          <p>This provides a possible meeting point for engineering, governance, behavioural science, law and operations. Each discipline can contribute its own expertise while working from a shared description of the system being designed or governed.</p>
         </div>
       </div>
     </section>
